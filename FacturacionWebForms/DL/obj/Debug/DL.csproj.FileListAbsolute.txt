@@ -1,0 +1,12 @@
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\DL\bin\Debug\DL.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\DL\bin\Debug\DL.pdb
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\DL\bin\Debug\Entities.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\DL\bin\Debug\MongoDB.Bson.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\DL\bin\Debug\MongoDB.Driver.Core.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\DL\bin\Debug\MongoDB.Driver.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\DL\bin\Debug\Entities.pdb
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\DL\bin\Debug\MongoDB.Bson.xml
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\DL\bin\Debug\MongoDB.Driver.xml
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\DL\obj\Debug\DL.csprojResolveAssemblyReference.cache
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\DL\obj\Debug\DL.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\DL\obj\Debug\DL.pdb

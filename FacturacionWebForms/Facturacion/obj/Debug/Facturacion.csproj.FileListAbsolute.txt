@@ -31,3 +31,47 @@ c:\users\oscar\documents\visual studio 2015\Projects\Facturacion\Facturacion\bin
 c:\users\oscar\documents\visual studio 2015\Projects\Facturacion\Facturacion\obj\Debug\Facturacion.csprojResolveAssemblyReference.cache
 c:\users\oscar\documents\visual studio 2015\Projects\Facturacion\Facturacion\obj\Debug\Facturacion.dll
 c:\users\oscar\documents\visual studio 2015\Projects\Facturacion\Facturacion\obj\Debug\Facturacion.pdb
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\ApplicationInsights.config
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\roslyn\csc.exe
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\roslyn\vbc.exe
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\roslyn\VBCSCompiler.exe
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\Facturacion.dll.config
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\Facturacion.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\Facturacion.pdb
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\Microsoft.AI.Web.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\Microsoft.ApplicationInsights.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\Microsoft.AI.Web.xml
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\Microsoft.ApplicationInsights.xml
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\obj\Debug\Facturacion.csprojResolveAssemblyReference.cache
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\obj\Debug\Facturacion.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\obj\Debug\Facturacion.pdb
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\BL.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\Entities.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\DL.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\MongoDB.Bson.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\MongoDB.Driver.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\MongoDB.Driver.Core.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\BL.pdb
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\Entities.pdb
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\DL.pdb
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\MongoDB.Bson.xml
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\MongoDB.Driver.xml

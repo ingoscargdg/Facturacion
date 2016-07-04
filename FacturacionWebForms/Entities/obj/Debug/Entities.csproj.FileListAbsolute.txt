@@ -1,0 +1,7 @@
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Entities\bin\Debug\Entities.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Entities\bin\Debug\Entities.pdb
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Entities\bin\Debug\MongoDB.Bson.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Entities\bin\Debug\MongoDB.Bson.xml
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Entities\obj\Debug\Entities.csprojResolveAssemblyReference.cache
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Entities\obj\Debug\Entities.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Entities\obj\Debug\Entities.pdb

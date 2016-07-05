@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Entities;
+using Entities.Invoice;
 using DL;
 
 namespace BL
 {
     public static class bInvoice
     {
-        public static void save(eInvoice eInvoice)
+        public static Invoice save(Invoice eInvoice)
         {
-            Invoice.Create();
+            return InvoiceDL.Create(eInvoice);
         }
     }
 }

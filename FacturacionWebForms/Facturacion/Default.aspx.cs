@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Entities;
+using Entities.Invoice;
 using BL;
 
 namespace Facturacion
@@ -18,7 +18,7 @@ namespace Facturacion
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
-            var eInvoice = new eInvoice { Name = "Oscar" };
+            var eInvoice = new Invoice { CondicionesPago = txtNameCustomer.Text };
             bInvoice.save(eInvoice);
         }
 

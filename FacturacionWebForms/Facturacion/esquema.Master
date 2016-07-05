@@ -5,20 +5,38 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link rel ="stylesheet" type ="text/css" href ="Content/css/default.css" />
+    <!-- Material Design fonts -->
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700"/>
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons"/>
+
+      <!-- Bootstrap -->
+      <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+
+      <!-- Bootstrap Material Design -->
+      <link rel="stylesheet" type="text/css" href="dist/css/bootstrap-material-design.css"/>
+      <link rel="stylesheet" type="text/css" href="dist/css/ripples.min.css"/>
+      <link rel ="stylesheet" type ="text/css" href ="Content/css/default.css" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
-        <div>
-            <ul>
-                <li><a href ="Default.aspx">Inicio</a></li>
-            </ul>
-        </div>
+        <nav class="navbar navbar-inverse">
+            <p class="navbar-text"><a href="Default.aspx" class="navbar-link">Inicio</a></p>
+        </nav>  
         <asp:ContentPlaceHolder ID="ctpHolder" runat="server">
-        
+            <div class="card">
+                <div class="card-height-indicator"></div>
+                <div class="card-content">
+                    <div class="card-image">
+                        <h3 class="card-image-headline">Facturación</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Sistema que permite facturar lo que desees.</p>
+                    </div>
+                </div>
+            </div>
         </asp:ContentPlaceHolder>
     </div>
     </form>

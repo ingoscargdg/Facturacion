@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="https://development.4gfactor.com:8008/wspacService" xmlns:wspacType="wspacType_NS" name="wspacService" targetNamespace="https://development.4gfactor.com:8008/wspacService" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="wspacType_NS">
+      <xsd:complexType name="sesRecord">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="ok" type="xsd:boolean" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="token" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="errorCode" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="cfdRecord">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="token" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="xml" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="cfd_NSRecord">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="username" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="password" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="xml" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="cfdiRecord">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="ok" type="xsd:boolean" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="errorCode" type="xsd:int" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="uuid" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="xml" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="string" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="date" type="xsd:dateTime" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="cfdStamp" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="certNumber" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="satStamp" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="cfdiERecord">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="ok" type="xsd:boolean" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="errorCode" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="errorDescription" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="uuid" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="xml" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="string" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="date" type="xsd:dateTime" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="cfdStamp" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="certNumber" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="satStamp" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="cancelCfdiRequestRequestRecord">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="token" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="uuid" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="cancelCfdiRequestResponseRecord">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="ok" type="xsd:boolean" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="errorCode" type="xsd:int" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="uuid" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="cancelCFDIckpRequest_NSRequestRecord">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="username" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="password" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="uuid" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="cert_hex" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="key_hex" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="key_password" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="cancelCFDIckpRequest_NSResponseRecord">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="ok" type="xsd:boolean" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="errorCode" type="xsd:int" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="uuid" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="cancelCfdiStatusRequestRecord">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="token" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="uuid" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="cancelCfdiStatusResponseRecord">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="ok" type="xsd:boolean" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="errorCode" type="xsd:int" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="ack" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="cancelCFDIStatus_NSRequestRecord">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="username" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="password" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="uuid" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="cancelCFDIStatus_NSResponseRecord">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="ok" type="xsd:boolean" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="errorCode" type="xsd:int" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="ack" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="searchCfdiRecord">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="token" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="uuid" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="validateCfdResponseRecord">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="ok" type="xsd:boolean" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="errorCode" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="pkgRecord">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="id" type="xsd:int" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="typeId" type="xsd:int" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="status" type="xsd:int" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="requestDate" type="xsd:date" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="requestTime" type="xsd:time" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="exhaustDate" type="xsd:date" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="exhaustTime" type="xsd:time" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="stampsTotal" type="xsd:int" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="stampsUsed" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="statsRecord">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="ok" type="xsd:boolean" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="errorCode" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="pkg" type="wspacType:pkgRecord" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="reqPkgRecord">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="token" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="typeId" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="reqPkgResponseRecord">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="ok" type="xsd:boolean" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="errorCode" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="retentionRecord">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="name" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="amount" type="xsd:double" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="taxRecord">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="name" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="amount" type="xsd:double" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="rate" type="xsd:double" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="itemRecord">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="order" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="id" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="description" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="quantity" type="xsd:double" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="units" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="value" type="xsd:double" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="amount" type="xsd:double" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="addressRecord">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="street" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="residence" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="externalNum" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="internalNum" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="zip" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="state" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="municipallity" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="country" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="vheadRecord">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="voucherType" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="series" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="consecutive" type="xsd:int" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="issuerName" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="issuerRfc" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="issuerRegime" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="issuerAddr" type="wspacType:addressRecord" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="issuedAtAddr" type="wspacType:addressRecord" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="receiverName" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="receiverRfc" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="receiverAddr" type="wspacType:addressRecord" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="subTotal" type="xsd:double" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="discount" type="xsd:double" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="total" type="xsd:double" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="currency" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="exchangeRate" type="xsd:double" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="accountNumber" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="paymentType" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="paymentSource" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="referenceConsecutive" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="referenceSeries" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="referenceIssueDate" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="referenceAmount" type="xsd:double" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="vdataRecord">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="vhead" type="wspacType:vheadRecord" />
+          <xsd:element minOccurs="1" maxOccurs="unbounded" name="item" type="wspacType:itemRecord" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="tax" type="wspacType:taxRecord" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="retention" type="wspacType:retentionRecord" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="voucherRecord">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="token" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="vdata" type="wspacType:vdataRecord" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="voucher_NSRecord">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="username" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="password" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="vdata" type="wspacType:vdataRecord" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="createCbbRecord">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="token" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="uuid" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="createCbb_NSRecord">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="username" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="password" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="uuid" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="cbbRecord">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="ok" type="xsd:boolean" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="errorCode" type="xsd:int" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="b64cbb" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </types>
+  <message name="openSessionRequest">
+    <part name="username" type="xsd:string" />
+    <part name="password" type="xsd:string" />
+  </message>
+  <message name="openSessionResponse">
+    <part name="ses" type="wspacType:sesRecord" />
+  </message>
+  <message name="closeSessionRequest">
+    <part name="token" type="xsd:string" />
+  </message>
+  <message name="closeSessionResponse">
+    <part name="ses" type="wspacType:sesRecord" />
+  </message>
+  <message name="createCFDIRequest">
+    <part name="cfd" type="wspacType:cfdRecord" />
+  </message>
+  <message name="createCFDIResponse">
+    <part name="cfdi" type="wspacType:cfdiRecord" />
+  </message>
+  <message name="createCFDI_NSRequest">
+    <part name="cfd_ns" type="wspacType:cfd_NSRecord" />
+  </message>
+  <message name="createCFDI_NSResponse">
+    <part name="cfdi" type="wspacType:cfdiRecord" />
+  </message>
+  <message name="createCFDI_NSERequest">
+    <part name="cfd_ns" type="wspacType:cfd_NSRecord" />
+  </message>
+  <message name="createCFDI_NSEResponse">
+    <part name="cfdi" type="wspacType:cfdiERecord" />
+  </message>
+  <message name="cancelCFDIRequestRequest">
+    <part name="cancelCfdiReq" type="wspacType:cancelCfdiRequestRequestRecord" />
+  </message>
+  <message name="cancelCFDIRequestResponse">
+    <part name="cancelReq" type="wspacType:cancelCfdiRequestResponseRecord" />
+  </message>
+  <message name="cancelCFDIckpRequest_NSRequest">
+    <part name="cancelReq" type="wspacType:cancelCFDIckpRequest_NSRequestRecord" />
+  </message>
+  <message name="cancelCFDIckpRequest_NSResponse">
+    <part name="cancelReq" type="wspacType:cancelCFDIckpRequest_NSResponseRecord" />
+  </message>
+  <message name="cancelCFDIStatusRequest">
+    <part name="cancelCfdiStt" type="wspacType:cancelCfdiStatusRequestRecord" />
+  </message>
+  <message name="cancelCFDIStatusResponse">
+    <part name="cancelStt" type="wspacType:cancelCfdiStatusResponseRecord" />
+  </message>
+  <message name="cancelCFDIStatus_NSRequest">
+    <part name="cancelStt" type="wspacType:cancelCFDIStatus_NSRequestRecord" />
+  </message>
+  <message name="cancelCFDIStatus_NSResponse">
+    <part name="cancelStt" type="wspacType:cancelCFDIStatus_NSResponseRecord" />
+  </message>
+  <message name="searchCFDIRequest">
+    <part name="searchCfdi" type="wspacType:searchCfdiRecord" />
+  </message>
+  <message name="searchCFDIResponse">
+    <part name="cfdi" type="wspacType:cfdiRecord" />
+  </message>
+  <message name="validateCFDRequest">
+    <part name="cfd" type="wspacType:cfdRecord" />
+  </message>
+  <message name="validateCFDResponse">
+    <part name="valid" type="wspacType:validateCfdResponseRecord" />
+  </message>
+  <message name="validateCFD_NSRequest">
+    <part name="cfd_ns" type="wspacType:cfd_NSRecord" />
+  </message>
+  <message name="validateCFD_NSResponse">
+    <part name="valid" type="wspacType:validateCfdResponseRecord" />
+  </message>
+  <message name="serviceUsageRequest">
+    <part name="token" type="xsd:string" />
+  </message>
+  <message name="serviceUsageResponse">
+    <part name="stats" type="wspacType:statsRecord" />
+  </message>
+  <message name="stampsRequestRequest">
+    <part name="reqPkg" type="wspacType:reqPkgRecord" />
+  </message>
+  <message name="stampsRequestResponse">
+    <part name="reqResp" type="wspacType:reqPkgResponseRecord" />
+  </message>
+  <message name="createVoucherRequest">
+    <part name="voucher" type="wspacType:voucherRecord" />
+  </message>
+  <message name="createVoucherResponse">
+    <part name="cfdi" type="wspacType:cfdiRecord" />
+  </message>
+  <message name="createVoucher_NSRequest">
+    <part name="voucher_ns" type="wspacType:voucher_NSRecord" />
+  </message>
+  <message name="createVoucher_NSResponse">
+    <part name="cfdi" type="wspacType:cfdiRecord" />
+  </message>
+  <message name="createCBBRequest">
+    <part name="cbbReq" type="wspacType:createCbbRecord" />
+  </message>
+  <message name="createCBBResponse">
+    <part name="cbb" type="wspacType:cbbRecord" />
+  </message>
+  <message name="createCBB_NSRequest">
+    <part name="cbbNSReq" type="wspacType:createCbb_NSRecord" />
+  </message>
+  <message name="createCBB_NSResponse">
+    <part name="cbb" type="wspacType:cbbRecord" />
+  </message>
+  <portType name="wspacServicePortType">
+    <operation name="openSession">
+      <input message="tns:openSessionRequest" />
+      <output message="tns:openSessionResponse" />
+    </operation>
+    <operation name="closeSession">
+      <input message="tns:closeSessionRequest" />
+      <output message="tns:closeSessionResponse" />
+    </operation>
+    <operation name="createCFDI">
+      <input message="tns:createCFDIRequest" />
+      <output message="tns:createCFDIResponse" />
+    </operation>
+    <operation name="createCFDI_NS">
+      <input message="tns:createCFDI_NSRequest" />
+      <output message="tns:createCFDI_NSResponse" />
+    </operation>
+    <operation name="createCFDI_NSE">
+      <input message="tns:createCFDI_NSERequest" />
+      <output message="tns:createCFDI_NSEResponse" />
+    </operation>
+    <operation name="cancelCFDIRequest">
+      <input message="tns:cancelCFDIRequestRequest" />
+      <output message="tns:cancelCFDIRequestResponse" />
+    </operation>
+    <operation name="cancelCFDIckpRequest_NS">
+      <input message="tns:cancelCFDIckpRequest_NSRequest" />
+      <output message="tns:cancelCFDIckpRequest_NSResponse" />
+    </operation>
+    <operation name="cancelCFDIStatus">
+      <input message="tns:cancelCFDIStatusRequest" />
+      <output message="tns:cancelCFDIStatusResponse" />
+    </operation>
+    <operation name="cancelCFDIStatus_NS">
+      <input message="tns:cancelCFDIStatus_NSRequest" />
+      <output message="tns:cancelCFDIStatus_NSResponse" />
+    </operation>
+    <operation name="searchCFDI">
+      <input message="tns:searchCFDIRequest" />
+      <output message="tns:searchCFDIResponse" />
+    </operation>
+    <operation name="validateCFD">
+      <input message="tns:validateCFDRequest" />
+      <output message="tns:validateCFDResponse" />
+    </operation>
+    <operation name="validateCFD_NS">
+      <input message="tns:validateCFD_NSRequest" />
+      <output message="tns:validateCFD_NSResponse" />
+    </operation>
+    <operation name="serviceUsage">
+      <input message="tns:serviceUsageRequest" />
+      <output message="tns:serviceUsageResponse" />
+    </operation>
+    <operation name="stampsRequest">
+      <input message="tns:stampsRequestRequest" />
+      <output message="tns:stampsRequestResponse" />
+    </operation>
+    <operation name="createVoucher">
+      <input message="tns:createVoucherRequest" />
+      <output message="tns:createVoucherResponse" />
+    </operation>
+    <operation name="createVoucher_NS">
+      <input message="tns:createVoucher_NSRequest" />
+      <output message="tns:createVoucher_NSResponse" />
+    </operation>
+    <operation name="createCBB">
+      <input message="tns:createCBBRequest" />
+      <output message="tns:createCBBResponse" />
+    </operation>
+    <operation name="createCBB_NS">
+      <input message="tns:createCBB_NSRequest" />
+      <output message="tns:createCBB_NSResponse" />
+    </operation>
+  </portType>
+  <binding name="wspacServiceBinding" type="tns:wspacServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <operation name="openSession">
+      <soap:operation soapAction="urn:wspac.wsdl#openSession" />
+      <input>
+        <soap:body use="literal" namespace="urn:wspac.wsdl" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="urn:wspac.wsdl" />
+      </output>
+    </operation>
+    <operation name="closeSession">
+      <soap:operation soapAction="urn:wspac.wsdl#closeSession" />
+      <input>
+        <soap:body use="literal" namespace="urn:wspac.wsdl" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="urn:wspac.wsdl" />
+      </output>
+    </operation>
+    <operation name="createCFDI">
+      <soap:operation soapAction="urn:wspac.wsdl#createCFDI" />
+      <input>
+        <soap:body use="literal" namespace="urn:wspac.wsdl" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="urn:wspac.wsdl" />
+      </output>
+    </operation>
+    <operation name="createCFDI_NS">
+      <soap:operation soapAction="urn:wspac.wsdl#createCFDI_NS" />
+      <input>
+        <soap:body use="literal" namespace="urn:wspac.wsdl" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="urn:wspac.wsdl" />
+      </output>
+    </operation>
+    <operation name="createCFDI_NSE">
+      <soap:operation soapAction="urn:wspac.wsdl#createCFDI_NSE" />
+      <input>
+        <soap:body use="literal" namespace="urn:wspac.wsdl" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="urn:wspac.wsdl" />
+      </output>
+    </operation>
+    <operation name="cancelCFDIRequest">
+      <soap:operation soapAction="urn:wspac.wsdl#cancelCFDIRequest" />
+      <input>
+        <soap:body use="literal" namespace="urn:wspac.wsdl" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="urn:wspac.wsdl" />
+      </output>
+    </operation>
+    <operation name="cancelCFDIckpRequest_NS">
+      <soap:operation soapAction="urn:wspac.wsdl#cancelCFDIckpRequest_NS" />
+      <input>
+        <soap:body use="literal" namespace="urn:wspac.wsdl" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="urn:wspac.wsdl" />
+      </output>
+    </operation>
+    <operation name="cancelCFDIStatus">
+      <soap:operation soapAction="urn:wspac.wsdl#cancelCFDIStatus" />
+      <input>
+        <soap:body use="literal" namespace="urn:wspac.wsdl" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="urn:wspac.wsdl" />
+      </output>
+    </operation>
+    <operation name="cancelCFDIStatus_NS">
+      <soap:operation soapAction="urn:wspac.wsdl#cancelCFDIStatus_NS" />
+      <input>
+        <soap:body use="literal" namespace="urn:wspac.wsdl" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="urn:wspac.wsdl" />
+      </output>
+    </operation>
+    <operation name="searchCFDI">
+      <soap:operation soapAction="urn:wspac.wsdl#searchCFDI" />
+      <input>
+        <soap:body use="literal" namespace="urn:wspac.wsdl" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="urn:wspac.wsdl" />
+      </output>
+    </operation>
+    <operation name="validateCFD">
+      <soap:operation soapAction="urn:wspac.wsdl#validateCFD" />
+      <input>
+        <soap:body use="literal" namespace="urn:wspac.wsdl" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="urn:wspac.wsdl" />
+      </output>
+    </operation>
+    <operation name="validateCFD_NS">
+      <soap:operation soapAction="urn:wspac.wsdl#validateCFD_NS" />
+      <input>
+        <soap:body use="literal" namespace="urn:wspac.wsdl" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="urn:wspac.wsdl" />
+      </output>
+    </operation>
+    <operation name="serviceUsage">
+      <soap:operation soapAction="urn:wspac.wsdl#serviceUsage" />
+      <input>
+        <soap:body use="literal" namespace="urn:wspac.wsdl" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="urn:wspac.wsdl" />
+      </output>
+    </operation>
+    <operation name="stampsRequest">
+      <soap:operation soapAction="urn:wspac.wsdl#stampsRequest" />
+      <input>
+        <soap:body use="literal" namespace="urn:wspac.wsdl" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="urn:wspac.wsdl" />
+      </output>
+    </operation>
+    <operation name="createVoucher">
+      <soap:operation soapAction="urn:wspac.wsdl#createVoucher" />
+      <input>
+        <soap:body use="literal" namespace="urn:wspac.wsdl" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="urn:wspac.wsdl" />
+      </output>
+    </operation>
+    <operation name="createVoucher_NS">
+      <soap:operation soapAction="urn:wspac.wsdl#createVoucher_NS" />
+      <input>
+        <soap:body use="literal" namespace="urn:wspac.wsdl" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="urn:wspac.wsdl" />
+      </output>
+    </operation>
+    <operation name="createCBB">
+      <soap:operation soapAction="urn:wspac.wsdl#createCBB" />
+      <input>
+        <soap:body use="literal" namespace="urn:wspac.wsdl" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="urn:wspac.wsdl" />
+      </output>
+    </operation>
+    <operation name="createCBB_NS">
+      <soap:operation soapAction="urn:wspac.wsdl#createCBB_NS" />
+      <input>
+        <soap:body use="literal" namespace="urn:wspac.wsdl" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="urn:wspac.wsdl" />
+      </output>
+    </operation>
+  </binding>
+  <service name="wspacService">
+    <documentation>4G Factor PAC Stamping Services</documentation>
+    <port name="wspacServicePort" binding="tns:wspacServiceBinding">
+      <soap:address location="https://development.4gfactor.com:8008/wspacService" />
+    </port>
+  </service>
+</definitions>

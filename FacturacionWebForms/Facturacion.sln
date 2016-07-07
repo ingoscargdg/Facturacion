@@ -11,7 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entiti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BL", "BL\BL.csproj", "{DFC8370C-67B3-42DB-85DD-057DF4B12BF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Libraries", "Libraries\Libraries.csproj", "{47AD420F-1796-4A83-A11D-075EDA94AFD6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAT", "Libraries\SAT.csproj", "{47AD420F-1796-4A83-A11D-075EDA94AFD6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{6358E37C-0C3C-4E01-BBA8-64E8BFE10ACB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,5 +44,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{47AD420F-1796-4A83-A11D-075EDA94AFD6} = {6358E37C-0C3C-4E01-BBA8-64E8BFE10ACB}
 	EndGlobalSection
 EndGlobal

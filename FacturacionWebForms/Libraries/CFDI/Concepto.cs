@@ -1,6 +1,6 @@
-﻿namespace Libraries.CFDI
+﻿namespace Libraries.SAT.CFDI
 {
-    class Concepto
+    public class Concepto
     {
         public decimal Cantidad { get; set; }
         

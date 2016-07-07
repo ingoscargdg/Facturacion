@@ -1,25 +1,25 @@
 ﻿
 
-namespace Libraries.CFDI
+namespace Libraries.SAT.CFDI
 {
-    class ExpedidoEn : IDireccion
+    public class ExpedidoEn : IDireccion
     {
-        string IDireccion.Calle { get; set; }
+        public string Calle { get; set; }
 
-        string IDireccion.NoExterior { get; set; }
+        public string NoExterior { get; set; }
 
-        string IDireccion.NoInterior { get; set; }
+        public string NoInterior { get; set; }
 
-        string IDireccion.Colonia { get; set; }
+        public string Colonia { get; set; }
 
-        string IDireccion.Localidad { get; set; }
+        public string Localidad { get; set; }
 
-        string IDireccion.Municipio { get; set; }
+        public string Municipio { get; set; }
 
-        string IDireccion.Estado { get; set; }
+        public string Estado { get; set; }
 
-        string IDireccion.Pais { get; set; }
+        public string Pais { get; set; }
 
-        string IDireccion.CP { get; set; }
+        public string CP { get; set; }
     }
 }

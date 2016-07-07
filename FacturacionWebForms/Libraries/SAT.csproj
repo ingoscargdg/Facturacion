@@ -42,13 +42,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CFDI\Comprobante.cs" />
+    <Compile Include="CFDI\Concepto.cs" />
+    <Compile Include="CFDI\IDireccion.cs" />
+    <Compile Include="CFDI\ExpedidoEn.cs" />
+    <Compile Include="CFDI\DomicilioFiscal.cs" />
+    <Compile Include="CFDI\Emisor.cs" />
+    <Compile Include="CFDI\Impuestos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SAT\Electronics.cs" />
+    <Compile Include="CFDI\Receptor.cs" />
+    <Compile Include="CFDI\Retenidos.cs" />
     <Compile Include="Service References\FactorTest\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="CFDI\Trasladados.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -143,6 +152,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\FactorTest\wspacService.wsdl" />
+    <None Include="XSD\cfdv32.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\FactorTest\" />
@@ -158,6 +170,10 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="XSLT\cadenaoriginal_3_2.xslt" />
+    <Content Include="XSLT\utilerias.xslt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
-namespace Libraries.CFDI
+namespace Libraries.SAT.CFDI
 {
-    class Trasladados
+    public class Trasladados
     {
         public string Impuesto { get; set; }
 

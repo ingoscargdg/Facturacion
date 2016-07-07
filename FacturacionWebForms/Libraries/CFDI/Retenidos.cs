@@ -1,10 +1,11 @@
 ﻿
-namespace Libraries.CFDI
+namespace Libraries.SAT.CFDI
 {
-    class Retenidos
+    public class Retenidos
     {
         public string Impuesto { get; set; }
 
         public decimal Importe { get; set; }
     }
 }
+S

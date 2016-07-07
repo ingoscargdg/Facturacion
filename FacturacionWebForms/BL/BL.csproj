@@ -52,6 +52,10 @@
       <Project>{389516e8-698b-488d-9b03-bfd18bd9ef61}</Project>
       <Name>Entities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Libraries\SAT.csproj">
+      <Project>{47ad420f-1796-4a83-a11d-075eda94afd6}</Project>
+      <Name>SAT</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

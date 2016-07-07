@@ -1,10 +1,12 @@
 ﻿
-namespace Libraries.CFDI
+namespace Libraries.SAT.CFDI
 {
-    class Receptor
+    public class Receptor
     {
         public string RFC { get; set; }
 
         public string Nombre { get; set; }
+
+        public DomicilioFiscal DomicilioFiscal { get; set; }
     }
 }

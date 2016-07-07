@@ -1,7 +1,7 @@
 ﻿
-namespace Libraries.CFDI
+namespace Libraries.SAT.CFDI
 {
-    class Impuestos
+    public class Impuestos
     {
         private Trasladados trasladados;
 

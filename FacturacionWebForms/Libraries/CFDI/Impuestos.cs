@@ -1,20 +1,38 @@
 ﻿
+using System.Collections.Generic;
+using System.Xml.Serialization;
+
 namespace Libraries.SAT.CFDI
 {
     public class Impuestos
     {
-        private Trasladados trasladados;
 
-        private Retenidos retenidos;
+        [XmlAttribute]
+        public decimal totalImpuestosRetenidos;
 
-        public void AddTrasladados(Trasladados trasladados)
+        [XmlAttribute]
+        public decimal totalImpuestosTrasladados;
+
+        public List<Retencion> Retenciones;
+
+        public List<Traslado> Traslados;
+
+        public void AddTrasladados(Traslado traslado)
         {
-            this.trasladados = trasladados;
+            if (this.Traslados == null)
+            {
+                this.Traslados = new List<Traslado>();
+            }
+            this.Traslados.Add( traslado);
         }
 
-        public void AddRetenidos(Retenidos retenidos)
+        public void AddRetenidos(Retencion retencion)
         {
-            this.retenidos= retenidos;
+            if(this.Retenciones == null)
+            {
+                this.Retenciones = new List<Retencion>();
+            }
+            this.Retenciones.Add(retencion);
         }
 
 

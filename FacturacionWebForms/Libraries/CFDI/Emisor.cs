@@ -1,17 +1,19 @@
-﻿using System;
+﻿using System.Xml.Serialization;
 
 namespace Libraries.SAT.CFDI
 {
     public class Emisor
     {
-        public string RFC { get; set; }
+        [XmlAttribute]
+        public string rfc { get; set; }
 
-        public string Nombre { get; set; }
+        [XmlAttribute]
+        public string nombre { get; set; }
 
         public DomicilioFiscal DomicilioFiscal { get; set; }
 
         public ExpedidoEn ExpedidoEn { get; set; }
 
-        public string RegimenFiscal { get; set; }
+        public RegimenFiscal RegimenFiscal { get; set; }
     }
 }

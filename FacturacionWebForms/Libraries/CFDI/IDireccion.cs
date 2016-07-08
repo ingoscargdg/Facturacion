@@ -3,23 +3,23 @@ namespace Libraries.SAT.CFDI
 {
     interface IDireccion 
     {
-        string Calle { get; set; }
+        string calle { get; set; }
 
-        string NoExterior { get; set; }
+        string noExterior { get; set; }
 
-        string NoInterior { get; set; }
+        string noInterior { get; set; }
 
-        string Colonia { get; set; }
+        string colonia { get; set; }
 
-        string Localidad { get; set; }
+        string localidad { get; set; }
 
-        string Municipio { get; set; }
+        string municipio { get; set; }
 
-        string Estado { get; set; }
+        string estado { get; set; }
 
-        string Pais { get; set; }
+        string pais { get; set; }
 
-        string CP { get; set; }
+        string codigoPostal { get; set; }
 
        
     }

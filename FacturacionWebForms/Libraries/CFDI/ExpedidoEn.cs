@@ -1,25 +1,34 @@
-﻿
+﻿using System.Xml.Serialization;
 
 namespace Libraries.SAT.CFDI
 {
     public class ExpedidoEn : IDireccion
     {
-        public string Calle { get; set; }
+        [XmlAttribute]
+        public string calle { get; set; }
 
-        public string NoExterior { get; set; }
+        [XmlAttribute]
+        public string noExterior { get; set; }
 
-        public string NoInterior { get; set; }
+        [XmlAttribute]
+        public string noInterior { get; set; }
 
-        public string Colonia { get; set; }
+        [XmlAttribute]
+        public string colonia { get; set; }
 
-        public string Localidad { get; set; }
+        [XmlAttribute]
+        public string localidad { get; set; }
 
-        public string Municipio { get; set; }
+        [XmlAttribute]
+        public string municipio { get; set; }
 
-        public string Estado { get; set; }
+        [XmlAttribute]
+        public string estado { get; set; }
 
-        public string Pais { get; set; }
+        [XmlAttribute]
+        public string pais { get; set; }
 
-        public string CP { get; set; }
+        [XmlAttribute]
+        public string codigoPostal { get; set; }
     }
 }

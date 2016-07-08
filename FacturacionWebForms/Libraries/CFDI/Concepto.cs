@@ -1,20 +1,31 @@
-﻿namespace Libraries.SAT.CFDI
+﻿using System;
+using System.Runtime.Serialization;
+using System.Xml.Serialization;
+
+namespace Libraries.SAT.CFDI
 {
-    public class Concepto
+    public class Concepto: IDeserializationCallback
     {
-        public decimal Cantidad { get; set; }
-        
-        public string Unidad { get; set; }
+        [XmlAttribute]
+        public decimal cantidad { get; set; }
 
-        public string NoIdentificacion { get; set; }
+        [XmlAttribute]
+        public string unidad { get; set; }
 
-        public string Descripcion { get; set; }
+        [XmlAttribute]
+        public string noIdentificacion { get; set; }
 
-        public decimal ValorUnitario { get; set; }
+        [XmlAttribute]
+        public string descripcion { get; set; }
 
-        public decimal Importe()
+        [XmlAttribute]
+        public decimal valorUnitario { get; set; }
+
+        private decimal importe;
+
+        public void OnDeserialization(object sender)
         {
-            return this.ValorUnitario * this.Cantidad;
+            importe= this.valorUnitario * this.cantidad;
         }
     }
 }

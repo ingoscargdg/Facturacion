@@ -1,64 +1,93 @@
-﻿using System.Collections.Generic;
+﻿using System.Data;
+using System.Collections.Generic;
+using System.Xml.Serialization;
 
 namespace Libraries.SAT.CFDI
 {
     public class Comprobante
     {
+        [XmlAttribute]
+        public string version { get; set; }
+
+        [XmlAttribute]
+        public string serie { get; set; }
+
+        [XmlAttribute]
+        public string folio { get; set; }
+
+        [XmlAttribute]
+        public string fecha { get; set; }
+
+        [XmlAttribute]
+        public string sello { get; set; }
+
+        [XmlAttribute]
+        public string formaDePago { get; set; }
+
+        [XmlAttribute]
+        public string noCertificado { get; set; }
+
+        [XmlAttribute]
+        public string certificado { get; set; }
+
+        [XmlAttribute]
+        public string condicionesDePago { get; set; }
+
+        [XmlAttribute]
+        public decimal Subtotal { get; set; }
+
+        [XmlAttribute]
+        public decimal Descuento { get; set; }
+
+        [XmlAttribute]
+        public string MotivoDescuento { get; set; }
+
+        [XmlAttribute]
+        public decimal TipoCambio { get; set; }
+
+        [XmlAttribute]
+        public string Moneda { get; set; }
+
+        [XmlAttribute]
+        public decimal Total { get; set; }
+
+        [XmlAttribute]
+        public string TipoDeComprobante { get; set; }
+
+        [XmlAttribute]
+        public string MetodoDePago { get; set; }
+
+        [XmlAttribute]
+        public string LugarExpedicion { get; set; }
+
+        [XmlAttribute]
+        public string NumCtaPago { get; set; }
+
+        [XmlAttribute]
+        public string FolioFiscalOrig { get; set; }
+
+        [XmlAttribute]
+        public string SerieFiscarlOrig { get; set; }
+
+        [XmlAttribute]
+        public string FechaFolioFiscalOrig { get; set; }
+
+        [XmlAttribute]
+        public string MontoFolioFiscalOrig { get; set; }
+
+        public Emisor Emisor;
+
+        public Receptor Receptor;
+
+        public List<Concepto> Conceptos;
+
+        public Impuestos Impuestos;
+
         private string ArchivoCer;
 
         private string ArchivoKey;
 
         private string PassKey;
-
-        public string Serie { get; set; }
-
-        public string Folio { get; set; }
-
-        public string Fecha { get; set; }
-
-        //public string Sello { get; set; }
-
-        //public string NoCertificado { get; set; }
-
-        //public string Certificado { get; set; }
-
-        public string FormaPago { get; set; }
-
-        public string CondicionesPago { get; set; }
-
-        public string TipoComprobante { get; set; }
-
-        public string MetodoPago { get; set; }
-
-        public string LugarExpedicion { get; set; }
-
-        public string NumCtaPago { get; set; }
-
-        public decimal Subtotal { get; set; }
-
-        public decimal Descuento { get; set; }
-
-        public string MotivoDescuento { get; set; }
-
-        public decimal TipoCambio { get; set; }
-
-        public decimal Total { get; set; }
-
-        public string FolioFiscalOrig { get; set; }
-
-        public string SerieFiscarlOrig { get; set; }
-
-        public string FechaFolioFiscalOrig { get; set; }
-
-        public string MontoFolioFiscalOrig { get; set; }
-
-        private Emisor emisor;
-
-        private Receptor receptor;
-
-        private List<Concepto> Conceptos;
-
-        private List<Impuestos> impuestos;
 
         public Comprobante()
         {
@@ -78,12 +107,12 @@ namespace Libraries.SAT.CFDI
 
         public void addEmisor(Emisor emisor)
         {
-            this.emisor = emisor;
+            this.Emisor = emisor;
         }
 
         public void addReceptor(Receptor receptor)
         {
-            this.receptor = receptor;
+            this.Receptor = receptor;
         }
 
         public void addConceptos(List<Concepto> conceptos)
@@ -93,17 +122,18 @@ namespace Libraries.SAT.CFDI
 
         public void addConcepto(Concepto concepto)
         {
+            if(this.Conceptos == null)
+            {
+                this.Conceptos = new List<Concepto>();
+            }
+
             this.Conceptos.Add(concepto);
         }
 
         public void addImpuestos(Impuestos impuestos)
         {
-            this.impuestos.Add(impuestos);
+            this.Impuestos = impuestos;
         }
 
-        public void Timbrar()
-        {
-           
-        }
     }
 }

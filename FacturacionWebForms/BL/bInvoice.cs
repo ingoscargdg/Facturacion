@@ -7,6 +7,8 @@ using Libraries.SAT.CFDI;
 using Entities.Invoice;
 using DL;
 
+using System.Xml.Serialization;
+
 namespace BL
 {
     public static class bInvoice
@@ -18,60 +20,91 @@ namespace BL
             string pass = "12345678a";
 
             Comprobante comprobante = new Comprobante(certificado, key, pass);
+            comprobante.version = "3.2";
+            comprobante.serie = "A";
+            comprobante.folio = "1";
+            comprobante.formaDePago = "PAGO EN UNA SOLA EXHIBICION";
+            comprobante.noCertificado = "0000000000000000000";
+            comprobante.fecha = "2016-06-13T10:53:39";
+            comprobante.Subtotal = 100;
+            comprobante.TipoCambio = Convert.ToDecimal(1.0);
+            comprobante.Moneda = "MXN";
+            comprobante.Total = 116;
+            comprobante.MetodoDePago = "EFECTIVO";
+            comprobante.TipoDeComprobante = "ingreso";
+            comprobante.LugarExpedicion = "AGUASCALIENTES, AGUASCALIENTES";
+            comprobante.NumCtaPago = "No Identificado";
 
             Emisor emisor = new Emisor();
-            emisor.RFC = "AAQM610917QJA";
-            emisor.Nombre ="JOSE MANUEL MARTINEZ";
+            emisor.rfc = "AAQM610917QJA";
+            emisor.nombre = "JOSE MANUEL MARTINEZ";
 
-            emisor.DomicilioFiscal.Calle = "Miguel Hidalgo";
-            emisor.DomicilioFiscal.NoInterior = "209";
-            emisor.DomicilioFiscal.Colonia = "Vicente Guerrero";
-            emisor.DomicilioFiscal.Localidad = "Tampico";
-            emisor.DomicilioFiscal.Municipio = "Tampico";
-            emisor.DomicilioFiscal.Estado = "Tamaulipas";
-            emisor.DomicilioFiscal.Pais = "Mexico";
-            emisor.DomicilioFiscal.CP = "89000";
+            emisor.DomicilioFiscal = new DomicilioFiscal();
+            emisor.DomicilioFiscal.calle = "Miguel Hidalgo";
+            emisor.DomicilioFiscal.noInterior = "209";
+            emisor.DomicilioFiscal.colonia = "Vicente Guerrero";
+            emisor.DomicilioFiscal.localidad = "Tampico";
+            emisor.DomicilioFiscal.municipio = "Tampico";
+            emisor.DomicilioFiscal.estado = "Tamaulipas";
+            emisor.DomicilioFiscal.pais = "Mexico";
+            emisor.DomicilioFiscal.codigoPostal = "89000";
 
-            emisor.ExpedidoEn.Calle = "Miguel Hidalgo";
-            emisor.ExpedidoEn.NoInterior = "209";
-            emisor.ExpedidoEn.Colonia = "Vicente Guerrero";
-            emisor.ExpedidoEn.Localidad = "Tampico";
-            emisor.ExpedidoEn.Municipio = "Tampico";
-            emisor.ExpedidoEn.Estado = "Tamaulipas";
-            emisor.ExpedidoEn.Pais = "Mexico";
-            emisor.ExpedidoEn.CP = "89000";
-
-            emisor.RegimenFiscal = "Régimen de actividades empresariales y profesionales";
+            emisor.ExpedidoEn = new ExpedidoEn();
+            emisor.ExpedidoEn.calle = "Miguel Hidalgo";
+            emisor.ExpedidoEn.noInterior = "209";
+            emisor.ExpedidoEn.colonia = "Vicente Guerrero";
+            emisor.ExpedidoEn.localidad = "Tampico";
+            emisor.ExpedidoEn.municipio = "Tampico";
+            emisor.ExpedidoEn.estado = "Tamaulipas";
+            emisor.ExpedidoEn.pais = "Mexico";
+            emisor.ExpedidoEn.codigoPostal = "89000";
+            RegimenFiscal RegimenFiscal = new RegimenFiscal();
+            RegimenFiscal.Regimen = "Régimen de actividades empresariales y profesionales";
+            emisor.RegimenFiscal = RegimenFiscal;
 
             comprobante.addEmisor(emisor);
 
             Receptor receptor = new Receptor();
-            receptor.RFC = "GIC900115IN7";
-            receptor.Nombre = "GRUPO INDUSTRIAL CREYSI S.A. DE C.V.";
+            receptor.rfc = "SAA791115JM0";
+            receptor.nombre = "SERVICIOS ASESORES S.A. DE C.V.";
 
-            receptor.DomicilioFiscal.Calle = "Miguel Hidalgo";
-            receptor.DomicilioFiscal.Colonia = "Parque Industrial";
-            receptor.DomicilioFiscal.Localidad = "EXPORTEC 1";
-            receptor.DomicilioFiscal.Municipio = "TOLUCA";
-            receptor.DomicilioFiscal.Estado = "MEXICO";
-            receptor.DomicilioFiscal.Pais = "MEXICO";
-            receptor.DomicilioFiscal.CP = "50223";
+            receptor.Domicilio = new DomicilioFiscal();
+            receptor.Domicilio.calle = "Miguel Hidalgo";
+            receptor.Domicilio.colonia = "Parque Industrial";
+            receptor.Domicilio.localidad = "EXPORTEC 1";
+            receptor.Domicilio.municipio = "TOLUCA";
+            receptor.Domicilio.estado = "MEXICO";
+            receptor.Domicilio.pais = "MEXICO";
+            receptor.Domicilio.codigoPostal = "50223";
 
             comprobante.addReceptor(receptor);
 
             Concepto concepto = new Concepto();
-            concepto.Cantidad = 1;
-            concepto.Unidad = "PZA";
-            concepto.NoIdentificacion = "RAM8GB";
-            concepto.Descripcion = "RAM 8GB";
-            concepto.ValorUnitario = Convert.ToDecimal(345.50);
-
+            concepto.cantidad = 1;
+            concepto.unidad = "PZA";
+            concepto.noIdentificacion = "RAM8GB";
+            concepto.descripcion = "RAM 8GB";
+            concepto.valorUnitario = Convert.ToDecimal(345.50);
             comprobante.addConcepto(concepto);
 
-            Trasladados iva = new Trasladados();
-            iva.Impuesto = "IVA";
-            iva.Tasa = 16;
-            iva.Importe =Convert.ToDecimal( 55.28);
+            Traslado iva = new Traslado();
+            iva.impuesto = "IVA";
+            iva.tasa = 16;
+            iva.importe = Convert.ToDecimal(55.28);
+            Impuestos Impuestos =  new Impuestos();
+            Impuestos.totalImpuestosTrasladados = Convert.ToDecimal(55.28);
+            Impuestos.AddTrasladados(iva);
+            comprobante.addImpuestos(Impuestos);
+
+            XmlSerializer s = new XmlSerializer(comprobante.GetType());
+            System.IO.StringWriter sw= new System.IO.StringWriter();
+            XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
+            ns.Add("cfdi", "http://www.sat.gob.mx/cfd/3");
+            ns.Add("xsi", "http://www.w3.org/2001/XMLSchema-instance");
+
+            s.Serialize(sw, comprobante,ns);
+            string a = sw.ToString();
+            sw.Close();
             //comprobante.addImpuestos(iva);
             return InvoiceDL.Create(eInvoice);
         }

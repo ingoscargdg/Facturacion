@@ -1,12 +1,15 @@
-﻿
+﻿using System.Xml.Serialization;
+
 namespace Libraries.SAT.CFDI
 {
     public class Receptor
     {
-        public string RFC { get; set; }
+        [XmlAttribute]
+        public string rfc { get; set; }
 
-        public string Nombre { get; set; }
+        [XmlAttribute]
+        public string nombre { get; set; }
 
-        public DomicilioFiscal DomicilioFiscal { get; set; }
+        public DomicilioFiscal Domicilio { get; set; }
     }
 }

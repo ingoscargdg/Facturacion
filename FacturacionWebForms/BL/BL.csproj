@@ -44,6 +44,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Alis\SAT.csproj">
+      <Project>{47ad420f-1796-4a83-a11d-075eda94afd6}</Project>
+      <Name>SAT</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DL\DL.csproj">
       <Project>{c1c0c1d3-32e6-49e1-bb4e-c8c01761265e}</Project>
       <Name>DL</Name>
@@ -52,9 +56,9 @@
       <Project>{389516e8-698b-488d-9b03-bfd18bd9ef61}</Project>
       <Name>Entities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Libraries\SAT.csproj">
-      <Project>{47ad420f-1796-4a83-a11d-075eda94afd6}</Project>
-      <Name>SAT</Name>
+    <ProjectReference Include="..\Utils\Utils.csproj">
+      <Project>{1a85cf05-a9da-4bad-8412-8833a7e88e0c}</Project>
+      <Name>Utils</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

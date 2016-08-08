@@ -75,5 +75,7 @@ C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\Entities.
 C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\DL.pdb
 C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\MongoDB.Bson.xml
 C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\MongoDB.Driver.xml
-C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\Libraries.dll
-C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\Libraries.pdb
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\Utils.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\Utils.pdb
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\Alis.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Facturacion\bin\Alis.pdb

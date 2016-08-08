@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Libraries.SAT.CFDI;
+using Alis.SAT.CFDI;
 using Entities.Invoice;
 using DL;
-
-using System.Xml.Serialization;
+using System.Xml;
 
 namespace BL
 {
@@ -17,9 +12,10 @@ namespace BL
         {
             string certificado = "C:\\Users\\oscar\\Desktop\\Archivos\\AAQM610917QJA.cer";
             string key = "C:\\Users\\oscar\\Desktop\\Archivos\\AAQM610917QJA_s.key";
+            string archivoXslt = @"cadenaoriginal_3_2.xslt";
             string pass = "12345678a";
 
-            Comprobante comprobante = new Comprobante(certificado, key, pass);
+            Comprobante comprobante = new Comprobante();
             comprobante.version = "3.2";
             comprobante.serie = "A";
             comprobante.folio = "1";
@@ -91,22 +87,29 @@ namespace BL
             iva.impuesto = "IVA";
             iva.tasa = 16;
             iva.importe = Convert.ToDecimal(55.28);
-            Impuestos Impuestos =  new Impuestos();
+            Impuestos Impuestos = new Impuestos();
             Impuestos.totalImpuestosTrasladados = Convert.ToDecimal(55.28);
             Impuestos.AddTrasladados(iva);
             comprobante.addImpuestos(Impuestos);
 
-            XmlSerializer s = new XmlSerializer(comprobante.GetType());
-            System.IO.StringWriter sw= new System.IO.StringWriter();
-            XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
-            ns.Add("cfdi", "http://www.sat.gob.mx/cfd/3");
-            ns.Add("xsi", "http://www.w3.org/2001/XMLSchema-instance");
+            string xmlNotSigning = Digital.serializarXml(comprobante); //Serializar sin sello
+            string cadenaoriginal = Alis.SAT.Common.GetOriginalChain(xmlNotSigning, archivoXslt); //cadena original
 
-            s.Serialize(sw, comprobante,ns);
-            string a = sw.ToString();
-            sw.Close();
-            //comprobante.addImpuestos(iva);
-            return InvoiceDL.Create(eInvoice);
+            comprobante.noCertificado = Alis.SAT.Common.GetNumberCertificate(certificado);
+            comprobante.certificado = Alis.SAT.Common.GetStringCertificate(certificado);
+            comprobante.sello = Alis.SAT.Common.SignOriginalChain(key, pass, cadenaoriginal);
+
+            string xmlSigning = Digital.serializarXml(comprobante); //Serializar sin sello
+
+            XmlDocument xml = new XmlDocument();
+            xml.LoadXml(xmlSigning);
+
+            Alis.SAT.Common.timbrar(xmlSigning);
+           return InvoiceDL.Create(eInvoice);
         }
+
+       
+
+
     }
 }

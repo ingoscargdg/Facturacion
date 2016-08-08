@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Alis.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Libraries_factor_development_wspacService" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://development.4gfactor.com:8008/wspacService</Value>
+    </Setting>
+    <Setting Name="Alis_Pac_Factor_Development_wspacService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://development.4gfactor.com:8008/wspacService</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,5 @@
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Utils\bin\Debug\Utils.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Utils\bin\Debug\Utils.pdb
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Utils\obj\Debug\Utils.csprojResolveAssemblyReference.cache
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Utils\obj\Debug\Utils.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Utils\obj\Debug\Utils.pdb

@@ -1,6 +1,0 @@
-C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Libraries\obj\Debug\SAT.csprojResolveAssemblyReference.cache
-C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Libraries\bin\Debug\Libraries.dll.config
-C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Libraries\bin\Debug\Libraries.dll
-C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Libraries\bin\Debug\Libraries.pdb
-C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Libraries\obj\Debug\Libraries.dll
-C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Libraries\obj\Debug\Libraries.pdb

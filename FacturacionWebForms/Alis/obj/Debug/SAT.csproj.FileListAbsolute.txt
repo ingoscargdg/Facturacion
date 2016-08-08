@@ -1,0 +1,16 @@
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Libraries\obj\Debug\SAT.csprojResolveAssemblyReference.cache
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Libraries\bin\Debug\Utils.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Libraries\bin\Debug\Utils.pdb
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Libraries\bin\Debug\Alis.dll.config
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Libraries\bin\Debug\Alis.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Libraries\bin\Debug\Alis.pdb
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Libraries\obj\Debug\Alis.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Libraries\obj\Debug\Alis.pdb
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Alis\bin\Debug\Alis.dll.config
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Alis\bin\Debug\Alis.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Alis\bin\Debug\Alis.pdb
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Alis\bin\Debug\Utils.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Alis\bin\Debug\Utils.pdb
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Alis\obj\Debug\SAT.csprojResolveAssemblyReference.cache
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Alis\obj\Debug\Alis.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\Alis\obj\Debug\Alis.pdb

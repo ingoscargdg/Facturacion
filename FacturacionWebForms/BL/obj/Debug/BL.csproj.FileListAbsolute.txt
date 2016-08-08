@@ -12,5 +12,7 @@ C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\BL\bin\Debug\MongoDB.Bson
 C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\BL\obj\Debug\BL.csprojResolveAssemblyReference.cache
 C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\BL\obj\Debug\BL.dll
 C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\BL\obj\Debug\BL.pdb
-C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\BL\bin\Debug\Libraries.dll
-C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\BL\bin\Debug\Libraries.pdb
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\BL\bin\Debug\Utils.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\BL\bin\Debug\Utils.pdb
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\BL\bin\Debug\Alis.dll
+C:\Users\oscar\Desktop\SistemasWeb\FacturacionWebForms\BL\bin\Debug\Alis.pdb
